@@ -1,8 +1,14 @@
 const removeFromArray = function(array, ...numbers) {
     for (number of numbers){
-        const index = array.indexOf(number)
-        array.splice(index,1)
-    };
+        let i = 0;
+        while (i < array.length){
+            if (array[i] === number){
+                array.splice(i,1)
+            } else {
+                i++
+            } 
+        }
+    }
     return (array)
 };
 console.log(removeFromArray([1,2,3], 3))
